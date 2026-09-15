@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>James Houston | Contact</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                         "Segoe UI", sans-serif;
+            background: #f2f2f7;
+            color: #1c1c1e;
+        }
+
+        .card {
+            width: min(92%, 420px);
+            background: white;
+            border-radius: 28px;
+            padding: 40px 28px 30px;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #007aff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .phone {
+            margin: 8px 0 30px;
+            font-size: 18px;
+            color: #8e8e93;
+        }
+
+        button,
+        a {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-top: 12px;
+            border-radius: 16px;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .primary {
+            background: #007aff;
+            color: white;
+        }
+
+        .secondary {
+            background: #e5e5ea;
+            color: #1c1c1e;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #8e8e93;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="avatar">JT</div>
+
+    <h1>James Houston</h1>
+
+    <div class="phone">
+        +1 804-305-4798
+    </div>
+
+    <button class="primary" onclick="downloadContact()">
+        Add to Contacts
+    </button>
+
+    <a class="secondary" href="tel:+18043054798">
+        Call
+    </a>
+
+    <a class="secondary" href="sms:+18043054798">
+        Text
+    </a>
+
+    <div class="footer">
+        NFC Contact Card
+    </div>
+
+</div>
+
+<script>
+function downloadContact() {
+
+    const vcard =
+`BEGIN:VCARD
+VERSION:3.0
+FN:James Houston
+TEL;TYPE=CELL:+18043054798
+END:VCARD`;
+
+    const blob = new Blob([vcard], {
+        type: "text/vcard;charset=utf-8"
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "James-Houston.vcf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
