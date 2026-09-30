@@ -1,152 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
-    <title>James Houston | Contact</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-                         "Segoe UI", sans-serif;
-            background: #f2f2f7;
-            color: #1c1c1e;
-        }
-
-        .card {
-            width: min(92%, 420px);
-            background: white;
-            border-radius: 28px;
-            padding: 40px 28px 30px;
-            text-align: center;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .avatar {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            background: #007aff;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            font-weight: 600;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        .phone {
-            margin: 8px 0 30px;
-            font-size: 18px;
-            color: #8e8e93;
-        }
-
-        button,
-        a {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            margin-top: 12px;
-            border-radius: 16px;
-            border: none;
-            font-size: 17px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .primary {
-            background: #007aff;
-            color: white;
-        }
-
-        .secondary {
-            background: #e5e5ea;
-            color: #1c1c1e;
-        }
-
-        .footer {
-            margin-top: 24px;
-            font-size: 13px;
-            color: #8e8e93;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1220">
+<title>James Houston | Cybersecurity</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; padding:28px 16px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#f4f6f8; color:#172033;
+}
+.card{
+  width:min(100%,430px); margin:auto; background:#fff;
+  border-radius:24px; padding:30px 24px 24px;
+  box-shadow:0 10px 35px rgba(0,0,0,.10);
+}
+.avatar{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;
+  background:#172033;color:#fff;font-size:28px;font-weight:700;
+}
+h1{text-align:center;margin:0;font-size:29px;letter-spacing:-.4px}
+.title{text-align:center;margin:7px 0 22px;color:#667085;font-size:16px}
+.summary{
+  text-align:center;line-height:1.5;color:#475467;font-size:14px;
+  margin:0 4px 22px;
+}
+a,button{
+  display:block;width:100%;padding:15px 16px;margin-top:11px;
+  border:0;border-radius:14px;text-align:center;text-decoration:none;
+  font-size:16px;font-weight:650;cursor:pointer;
+}
+.primary{background:#172033;color:#fff}
+.secondary{background:#edf0f3;color:#172033}
+.links{display:flex;gap:10px;margin-top:11px}
+.links a{margin:0;flex:1;font-size:15px}
+.section{margin-top:25px;border-top:1px solid #e5e7eb;padding-top:20px}
+.label{
+  font-size:12px;font-weight:750;letter-spacing:.08em;
+  text-transform:uppercase;color:#667085;margin-bottom:9px;
+}
+.cert{font-weight:650}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  background:#f1f3f5;border-radius:999px;padding:7px 10px;
+  font-size:13px;color:#344054;
+}
+.footer{text-align:center;margin-top:23px;color:#98a2b3;font-size:12px}
+</style>
 </head>
-
 <body>
+<main class="card">
+  <div class="avatar">JH</div>
+  <h1>James Houston</h1>
+  <div class="title">Cybersecurity Student · IT Support</div>
 
-<div class="card">
+  <p class="summary">
+    CompTIA Security+ certified cybersecurity student with hands-on experience
+    in IT support, security operations, networking, systems administration, and
+    enterprise security labs.
+  </p>
 
-    <div class="avatar">JH</div>
+  <button class="primary" onclick="downloadContact()">＋ Add to Contacts</button>
+  <a class="primary" href="James-Houston-Resume.pdf">View Resume</a>
 
-    <h1>James Houston</h1>
+  <div class="links">
+    <a class="secondary" href="https://www.linkedin.com/in/james-houston-361b56286/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="secondary" href="https://github.com/houstjam" target="_blank" rel="noopener">GitHub</a>
+  </div>
 
-    <div class="phone">
-        +1 804-305-4798
+  <section class="section">
+    <div class="label">Certification</div>
+    <div class="cert">CompTIA Security+ (SY0-701)</div>
+  </section>
+
+  <section class="section">
+    <div class="label">Focus Areas</div>
+    <div class="tags">
+      <span class="tag">Cybersecurity</span>
+      <span class="tag">SOC</span>
+      <span class="tag">IT Support</span>
+      <span class="tag">Networking</span>
+      <span class="tag">Systems</span>
+      <span class="tag">Security Operations</span>
     </div>
+  </section>
 
-    <button class="primary" onclick="downloadContact()">
-        Add to Contacts
-    </button>
-
-    <a class="secondary" href="tel:+18043054798">
-        Call
-    </a>
-
-    <a class="secondary" href="sms:+18043054798">
-        Text
-    </a>
-
-    <div class="footer">
-        NFC Contact Card
-    </div>
-
-</div>
+  <div class="footer">NFC Contact Card</div>
+</main>
 
 <script>
 function downloadContact() {
-
-    const vcard =
-`BEGIN:VCARD
+  const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:James Houston
-TEL;TYPE=CELL:+18043054798
+EMAIL:houston804@icloud.com
 END:VCARD`;
 
-    const blob = new Blob([vcard], {
-        type: "text/vcard;charset=utf-8"
-    });
-
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "James-Houston.vcf";
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    URL.revokeObjectURL(url);
+  const blob = new Blob([vcard], {type:"text/vcard;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "James-Houston.vcf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 </script>
-
 </body>
 </html>
